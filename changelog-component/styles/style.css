@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 640px;
+    height: 680px;
+    border: 2px solid black;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .title {
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.container .description {
+    color: #A5A5A5;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.container .wrapper .date-container li {
+    color: #A5A5A5;
+    margin-right: 20px;
+}
+
+.date {
+    list-style: none;
+}
+
+.li-container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container .wrapper .changelog-container {
+    position: relative;
+}
+
+.container .wrapper .changelog-container::before {
+    content: "";
+    width: 2px;
+    height: 400px;
+    background-color: black;
+    transform: translateX(-50%);
+    bottom: 0;
+    left: -20px;
+    position: absolute;
+}
+
+.container .wrapper .changelog-container .changelog {
+    list-style: none;
+    position: relative;
+}
+
+.container .wrapper .changelog-container .changelog::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 16px;
+    height: 16px;
+    left: -20px;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.visit-btn {
+    margin: auto;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    width: 200px;
+    height: 40px;
+}
