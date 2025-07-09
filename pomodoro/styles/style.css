@@ -1,9 +1,15 @@
+@font-face {
+    font-family: arialRounded;
+    src: url(./../fonts/arialroundedmtbold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: arialRounded;
     color: white;
+    transition: all 0.6s ease-in-out;
 }
 
 body {
@@ -17,13 +23,21 @@ body {
 .container {
     width: 480px;
     height: 310px;
-    padding: 20px 0px 30px 0px;
-    background-color: #C25C5C;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    background-color: rgb(255, 255, 255, 0.1);
+    text-align: center;
     align-items: center;
     border-radius: 6px;
+}
+
+.container .inner-container {
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;   
+    padding: 20px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container .nav {
@@ -41,11 +55,12 @@ body {
     border-radius: 4px;
     color: white;
     font-size: 16px;
+    font-weight: 300;
 }
 
 .container .nav .focus {
-    background-color: #A54E4E;
-    font-weight: bold;
+    background-color: rgb(0, 0, 0, 0.15);
+    font-weight: bold !important;
 }
 
 .container .timer {
@@ -62,4 +77,14 @@ body {
     font-size: 22px;
     border: none;
     border-radius: 4px;
+    transition: none;
+}
+
+.container .shadow {
+    transform: translateY(-6px);
+    box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+}
+
+.audio-player {
+    display: none;
 }
